@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    background-image: url(./img/netherlands.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 60px;
+    color: orange;
+    text-align: center;
+    margin-top: 40px;
+}
+
+hr {
+    margin-top: 20px;
+    border: 3px solid orange;
+    width: 60px;
+}
+
+.sub-title {
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.card-box {
+    display: flex;
+    text-align: center;
+    height: 40vh;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: white;
+    width: calc(100%/3 - 80px);
+    height: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px;
+    color: grey;
+}
+
+.credits {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+.footer {
+    font-size: 15px;
+    color: white; 
+    text-align: center;
+    background-color: grey;
+    height: calc(10vh - 40px);
+    padding-top: 40px;
+    margin-top: auto;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+img {
+    max-height: 100px;
+}
+
+#icon1{
+    content: url(./img/icon4.png);
+}
+
+#icon2{
+    content: url(./img/icon2.png);
+}
+
+#icon3{
+    content: url(./img/icon5.png);
+}
+
+#email-card {
+    text-decoration: underline;
+    font-weight: bold;
+    color: black;
+}
