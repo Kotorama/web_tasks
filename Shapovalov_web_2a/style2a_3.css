@@ -25,7 +25,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: right;
     border-radius: 50px;
     background-color: #f2f2f2;
 }
@@ -83,6 +82,17 @@ body {
 #round-image1, #round-image2, #round-image3 {
     content: url(./img/round\ image1.png);
 }
+
+
+/*kind of a hot fix*/
+.left-bubble {
+    text-align: right;
+}
+
+.left-bubble .button-container{
+    margin-left: 65%;
+}
+
 
 
 
