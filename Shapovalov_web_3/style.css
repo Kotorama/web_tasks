@@ -1,12 +1,36 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(./img/FFTablet_1100x.progressive.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
 .container {
-    width: 100px;
-    aspect-ratio: 1/1;
+    width: 150px;
+    height: 150px;
     position: relative;
     border-radius: 50%;
-    background-color: aquamarine;
+    background-color: rgba(0, 0, 0, 0);
     display: flex;
+    color: whitesmoke;
+    text-transform: capitalize;
    }
   
+   .arrow {
+    --deg: 15;
+    transform: rotate(-90deg);
+    width: 50%;
+    margin: auto;
+    opacity: 0.5;
+    animation: identifier1 0.5s both;
+    animation-delay: calc(var(--deg)* 0.25s);
+   }
+
    .container>div:not(.arrow) {
     top: 0;
     transform-origin: bottom;
@@ -15,15 +39,6 @@
     left: 50%;
     animation:
      identifier 0.5s both;
-    animation-delay: calc(var(--deg)* 0.25s);
-   }
-  
-   .arrow {
-    transform: rotate(-90deg);
-    width: 50%;
-    margin: auto;
-    opacity: 0.5;
-    animation: identifier1 0.5s both;
     animation-delay: calc(var(--deg)* 0.25s);
    }
   
@@ -56,17 +71,6 @@
      transform: rotate(-90deg) scale(1);
     }
    }
-body{
-    margin: 0;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-image: url(./img/FFTablet_1100x.progressive.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
 
 .top-menu-text{
     display: flex;
@@ -78,6 +82,10 @@ body{
     width: 40%;
 }
 
+.top-menu-text :last-child{
+    display: none;
+}
+
 .title{
     height: 25%;
     display: flex;
@@ -86,7 +94,7 @@ body{
 }
 
 .h1 {
-    font-size:200px;
+    font-size:13vw;
     text-transform: uppercase;
     color: white;
     text-align: center;
@@ -137,6 +145,62 @@ body{
 
 .bottom-half {
     display: flex;
-    height: 40%;
+    height: 400px;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.info-card {
+    color: whitesmoke;
+    font-size: 40px;
+    max-width: 500px;
+    height: 100%;
+    text-align: left;
+    margin-left: 80px;
+    overflow-wrap: break-word;
+}
+
+.eagle-icon {
+    width: 580px;
+    display: flex;
+    justify-content: center;
+}
+
+.eagle-icon img{
+    height: 200px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .h1, .top-icon, .start-button, .container{
+        display: none;
+    }
+    .top-menu-text :last-child{
+        display: unset;
+    }
+    .top-menu-text{
+        width: 70%;
+    }
+    .top-bar{
+        justify-content: right;
+    }
+    .bottom-half{
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100vh - 127px);
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .info-card{
+        margin: unset;
+        max-width: 70%;
+        height: 300px;
+        text-align: center;
+        font-size: 25px;
+    }
+    .eagle-icon img{
+        height: 150px;
+    }
+  }
 
