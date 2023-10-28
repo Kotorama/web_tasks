@@ -1,0 +1,88 @@
+<style>
+ .container {
+  width: 100px;
+  aspect-ratio: 1/1;
+  position: relative;
+  border-radius: 50%;
+  background-color: aquamarine;
+  display: flex;
+ }
+
+ .container>div:not(.arrow) {
+  top: 0;
+  transform-origin: bottom;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  animation:
+   identifier 0.5s both;
+  animation-delay: calc(var(--deg)* 0.25s);
+ }
+
+ .arrow {
+  transform: rotate(-90deg);
+  width: 50%;
+  margin: auto;
+  opacity: 0.5;
+  animation: identifier1 0.5s both;
+  animation-delay: calc(var(--deg)* 0.25s);
+ }
+
+ @keyframes identifier {
+  0% {
+   transform:
+    translateX(-50%) translateY(100%)
+  }
+
+  50% {
+   transform:
+    translateX(-50%) translateY(0)
+  }
+
+  100% {
+   transform:
+    translateX(-50%) rotate(calc(var(--deg)* 24deg))
+  }
+ }
+
+ @keyframes identifier1 {
+
+  0% {
+   opacity: 0;
+   transform: rotate(-90deg) scale(0.5);
+  }
+
+  100% {
+   opacity: 0.5;
+   transform: rotate(-90deg) scale(1);
+  }
+ }
+</style>
+
+<body>
+
+
+ <div class="container">
+  <div style="--deg: 0">A</div>
+  <div style="--deg: 1">l</div>
+  <div style="--deg: 2">i</div>
+  <div style="--deg: 3">q</div>
+  <div style="--deg: 4">u</div>
+  <div style="--deg: 5">i</div>
+  <div style="--deg: 6">p</div>
+  <div style="--deg: 7">e</div>
+  <div style="--deg: 8">n</div>
+  <div style="--deg: 9">i</div>
+  <div style="--deg: 10"></div>
+  <div style="--deg: 11">n</div>
+  <div style="--deg: 12">i</div>
+  <div style="--deg: 13">s</div>
+  <div style="--deg: 14">i</div>
+  <div class="arrow" style="--deg: 15">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+    <path style="fill:#232326" d="M24 12.001H2.914l5.294-5.295-.707-.707L1 12.501l6.5 6.5.707-.707-5.293-5.293H24v-1z"
+     data-name="Left" />
+   </svg>
+  </div>
+ </div>
+</body>
