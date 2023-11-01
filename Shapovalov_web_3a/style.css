@@ -73,7 +73,7 @@ body {
     width: 50px;
     padding: 10px;
     border-radius: 50%;
-    background-color: orange;
+    background-color: #f8b001;
     aspect-ratio: 1/1;
     margin-bottom: 10px;
 }
@@ -83,19 +83,122 @@ body {
     filter: invert(28%) sepia(56%) saturate(2830%) hue-rotate(226deg) brightness(89%) contrast(95%);
 }
 
-.grid-cards {
+.grid-cards-with-img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: auto auto;
     gap: 10px;
     width: 650px;
+    margin-top: 100px;
 }
 
-.grid-cards > :first-child {
+.grid-cards-with-img > :first-child, .grid-cards > :first-child {
     grid-column: 1 / 4;
 }
 
 .info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     background-color: white;
     border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.info-card img{
+    width: 180px;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+}
+
+.grid-title {
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 2;
+}
+
+.description-body {
+    font-style: italic;
+}
+
+.description-link {
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: blue;
+    
+}
+
+.img-description {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    width: 650px;
+    margin-top: 100px;
+}
+
+.grid-cards img {
+    width: 20px;
+
+}
+
+.grid-cards .grid-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+}
+
+.grid-cards .grid-header {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: blue;
+    font-weight: bold;
+    width: 100%;
+}
+
+.grid-cards .arrow-wrapper {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    filter: invert(28%) sepia(56%) saturate(2830%) hue-rotate(226deg) brightness(89%) contrast(95%);
+}
+
+.grid-card > div {
+    margin: 10px 0;
+}
+
+.grid-cards .grid-info {
+    font-size: 12px;
+    color: grey;
+}
+
+.yellow-stripe { /*This sucks, make it a gradient*/
+    width: 100vw;
+    background-color: #f8b001;
+    height: 250px;
+    position: absolute;
+    top: 1785px;
+    z-index: -1;
 }
