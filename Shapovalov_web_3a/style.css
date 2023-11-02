@@ -58,7 +58,6 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     height: 500px;
-    aspect-ratio: 1/1;
     position: absolute;
     left: 0;
     top: 50px;
@@ -225,7 +224,7 @@ body {
     font-size: 25px;
 }
 
-.num-grid-button {
+.num-grid-button, .single-card-button {
     height: 40px;
     width: 150px;
     border-radius: 20px;
@@ -251,3 +250,68 @@ body {
 .number-subtext {
     font-size: 15px;
 } 
+
+.round-bckg-img2 {
+    margin-top: 150px;
+    width: 650px;
+    position: relative;
+    height: 550px;
+}
+
+.round-bckg-img2 img {
+    border-radius: 50%;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.single-card {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    aspect-ratio: 1/1;
+    width: 300px;
+    padding: 30px;
+}
+
+.single-card-title {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.single-card-contents {
+    font-size: 20px;
+
+}
+
+.bckg-grad-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+    background: linear-gradient(0deg, whitesmoke 40%, rgba(69,81,221,1) 40%);
+    width: 100%;
+}
+
+.circles-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: repeat(1fr, 3);
+    width: 650px;
+    background-color: whitesmoke;
+}
+
+.circles-grid-circle img{
+    width: 100px;
+}
+
+.circles-grid-icon img{
+    width: 50px;
+}
