@@ -119,15 +119,15 @@ body {
 
 .block2 .content-container {
     width: 650px;
-    height: 500px;
+    height: 570px;
     position: relative;
 }
 
 .block2 .background-image {
     background-image: url(./images/background-img1.jpg); /*isn't really the same image but I'm not going to search for the exact one*/
     background-size: cover;
-    width: 400px;
-    height: 250px;
+    width: 450px;
+    height: 300px;
     top: 100px;
     left: 50px;
     position: absolute;
@@ -140,7 +140,7 @@ body {
     border-radius: 50%;
     background-color: var(--grey-color);
     position: absolute;
-    right: 140px;
+    right: 90px;
     top: 40px;
 }
 
@@ -148,8 +148,466 @@ body {
     width: 100px;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-image: repeating-linear-gradient(135deg,var(--grey-color),var(--grey-color) 3%, rgba(255,255,255,0) 3%, rgba(255,255,255,0) 10%, var(--grey-color) 10%, var(--grey-color) 10%, rgba(217,217,217,0) 10%);
+    background-image: repeating-linear-gradient(135deg,whitesmoke,whitesmoke 3%, rgba(255,255,255,0) 3%, rgba(255,255,255,0) 10%, whitesmoke 10%, whitesmoke 10%, rgba(217,217,217,0) 10%);
     position: absolute;
     left: 0;
+    top: 350px;
+}
+
+.block2 .content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 275px;
+    width: 250px;
+    position: absolute;
+    z-index: 3;
+    background-color: whitesmoke;
+    right: 0;
+    top: 225;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+}
+
+.block2 .content-card .card-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.block2 .content-card .card-content {
+    color: grey;
+}
+
+.block3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.block3 .content-container {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+}
+
+.block3 .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.block3 .grid-cards .card {
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
+    padding: 15px;
+}
+
+.block3 .grid-cards .card .orange-rectangle {
+    width: 30px;
+    height: 60px;
+    background-color: var(--orange-color);
+}
+
+.block3 .grid-cards .card .card-content {
+    width: 240px;
+    color: grey;
+}
+
+.block3 .background-gallery {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: 870px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.block3 .background-gallery .content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 320px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+}
+
+.block3 .background-gallery .content-card .card-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.block3 .background-gallery .content-card .card-content {
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.block3 .background-gallery .transperent-card {
+    display: none;
+}
+
+.block3 .background-gallery .background-image1 {
+    position: absolute;
+    width: 230px;
+    height: 270px;
+    background-image: url(./images/yellow-chair.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    top: 90px;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+}
+
+.block3 .background-gallery .background-image2 {
+    position: absolute;
+    width: 350px;
+    height: 270px;
+    background-image: url(./images/white-wall.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    top: 200px;
+    right: 0;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+}
+
+.block3 .background-gallery .background-image3 {
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    background-image: url(./images/white-chair.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    top: 400px;
+    left: 100px;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+}
+
+.block3 .background-gallery .background-image4 {
+    position: absolute;
+    width: 230px;
+    height: 270px;
+    background-image: url(./images/caller-lady.jpeg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    top: 550px;
+    right: 0;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+}
+
+.block3 .background-gallery .transperent-card {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 750px ;
+}
+
+.block3 .background-gallery .transperent-card .vertical-line {
+    background-color: rgb(51, 51, 51);
+    width: 6px;
+    height: 130px;
+}
+
+.block3 .background-gallery .transperent-card-content {
+    width: 300px;
+    color: rgb(51, 51, 51);
+    padding: 20px;
+}
+
+.block4 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--orange-color);
+}
+
+.block4 .content-container {
+    width: 650px;
+    height: 570px;
+    position: relative;
+}
+
+.block4 .background-image {
+    width: 320px;
+    height: 400px;
+    position: absolute;
+    background-image: url(./images/lemon-pillow.webp);
+    background-size: cover;
+    background-position: center;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+}
+
+.block4 .content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 210px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+    position: absolute;
+    z-index: 3;
+    right: 70px;
+    top: 90px;
+}
+
+.block4 .content-card .card-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.block4 .content-card .card-content {
+    color: grey;
+    margin-bottom: 30px;
+}
+
+.block4 .grey-rectangle {
+    width: 400px;
+    height: 180px;
+    position: absolute;
+    background-color: var(--grey-color);
+    right: 0;
     top: 300px;
+}
+
+.block4 .solid-circle {
+    width: 140px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--grey-color);
+    position: absolute;
+    right: 0px;
+    top: 40px;
+}
+
+.block4 .striped-circle {
+    width: 130px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-image: repeating-linear-gradient(135deg,whitesmoke,whitesmoke 3%, rgba(255,255,255,0) 3%, rgba(255,255,255,0) 10%, whitesmoke 10%, whitesmoke 10%, rgba(217,217,217,0) 10%);
+    position: absolute;
+    left: 0;
+    top: 380px;
+    z-index: 4;
+}
+
+.block5 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.block5 .content-container {
+    width: 650px;
+    height: 800px;
+    position: relative;
+}
+
+.block5 .content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 250px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+    position: absolute;
+    z-index: 3;
+    left: 70px;
+    top: 350px;
+}
+
+.block5 .content-card .card-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.block5 .content-card .card-content {
+    color: grey;
+    margin-bottom: 30px;
+}
+
+.block5 .background-image1 {
+    background-image: url(./images/minimalist-picture.jpg);
+    background-size: cover;
+    background-position: bottom;
+    width: 350px;
+    height: 180px;
+    position: absolute;
+    top: 70px;
+    z-index: 2;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+}
+
+.block5 .background-image2 {
+    background-image: url(./images/yellow-wall.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+}
+
+.block5 .background-image3 {
+    background-image: url(./images/family-groceries.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 470px;
+    right: 0;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+}
+
+.block5 .background-image4 {
+    background-image: url(./images/green-wall.jpg);
+    background-size: cover;
+    background-position: bottom;
+    width: 280px;
+    height: 170px;
+    position: absolute;
+    top: 550px;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+}
+
+.block6 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--orange-color);
+}
+
+.block6 .content-container {
+    width: 650px;
+    height: 490px;
+    position: relative;
+}
+
+.block6 .info-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1.3fr 1fr;
+    width: 300px;
+    gap: 20px;
+    position: absolute;
+    top: 70px;
+    z-index: 2;
+}
+
+.block6 .info-cards-grid .info-card {
+    background-color: rgb(51, 51, 51);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.block6 .info-cards-grid .info-card .card-icon img{
+    width: 35px;
+    filter: invert(99%) sepia(47%) saturate(6082%) hue-rotate(319deg) brightness(94%) contrast(93%);
+}
+
+.block6 .info-cards-grid .info-card .info-header{
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+.block6 .info-cards-grid .info-card .info-content{
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.block6 .info-cards-grid .info-card .info-content span{
+    font-weight: lighter;
+    color: var(--orange-color);
+    text-decoration: underline;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.2);
+    width: 350px;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    padding: 50px 0;
+    padding-right: 38px;
+}
+
+.block6 .contact-header {
+    font-size: 30px;
+    font-weight: bold;
+    width: 280px;
+    text-align: center;
+
+}
+
+.block6 .contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.block6 input, .block6 textarea {
+    border: none;
+    background-color: var(--grey-color);
+    color: gray;
+    margin: 10px 0;
+}
+
+.block6 input {
+    height: 30px;
+    width: 280px;
+}
+
+.block6 textarea {
+    height: 100px;
+}
+
+.block6 .contact-form-button {
+    height: 30px;
+    width: 280px;
+    border: none;
+    text-transform: uppercase;
+    background-color: var(--orange-color);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(51, 51, 51);
+    color: whitesmoke;
+    font-size: 12px;
+}
+
+.footer .footer-link span {
+    color: rgb(94, 148, 255);
+    text-decoration: underline;
 }
