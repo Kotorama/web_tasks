@@ -1,5 +1,5 @@
 let smallLetters = /^[a-z]+$/;
-let capitalLetters = /^[A-Z]+$/
+let capitalLetters = /^[A-Z]+$/;
 
 var animDelay = 0.25
 
