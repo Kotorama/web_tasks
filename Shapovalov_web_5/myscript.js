@@ -8,7 +8,6 @@ var animDelay = 0.25
 
 function letterTranslation(letter) {
     if(regex.test(letter)) {
-        console.log('style', '--anim-delay:' + animDelay + 's')
         letterImage = document.createElement('img')
         letterImage.setAttribute('style', '--anim-delay:' + animDelay + 's')
         letterImage.src = './images/' + array[array.indexOf(letter) + 1]
@@ -16,7 +15,7 @@ function letterTranslation(letter) {
     }
     if(letter == ' ') {
         emptySpan = document.createElement('span')
-        emptySpan.style("--anim-delay:" + animDelay + ' s')
+        emptySpan.setAttribute('style', '--anim-delay:' + animDelay + 's')
         document.getElementById('result-text').appendChild(emptySpan)
     }
     animDelay += 0.25
@@ -36,6 +35,7 @@ function clearText(element) {
 function letterConversion(input) {
     input = document.getElementById('source-text').value
     const myArray = input.split("");
+    animDelay = 0.25
     document.getElementById('result-text').innerHTML = ''
     myArray.map(letterTranslation)
     animationTimer
