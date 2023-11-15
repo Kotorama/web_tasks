@@ -4,16 +4,22 @@ const array = ['A', 'A.png', 'B', 'B.png', 'C', 'C.png', 'D', 'D.png', 'E', 'E.p
 
 let regex = /^[a-zA-Z]+$/;
 
+var animDelay = 0.25
+
 function letterTranslation(letter) {
     if(regex.test(letter)) {
+        console.log('style', '--anim-delay:' + animDelay + 's')
         letterImage = document.createElement('img')
+        letterImage.setAttribute('style', '--anim-delay:' + animDelay + 's')
         letterImage.src = './images/' + array[array.indexOf(letter) + 1]
         document.getElementById('result-text').appendChild(letterImage)
     }
     if(letter == ' ') {
         emptySpan = document.createElement('span')
+        emptySpan.style("--anim-delay:" + animDelay + ' s')
         document.getElementById('result-text').appendChild(emptySpan)
     }
+    animDelay += 0.25
 }
 
 function animationTimer() {
