@@ -4,11 +4,30 @@
     </head>
     <body>
         <div class="calc-container" id="calc-cont">
-            <div style="color: red; font-weight: bold; font-size: 40px;">Choose calculation method!</div>
+            <!--<div style="color: red; font-weight: bold; font-size: 40px;">Choose calculation method!</div>-->
+            <div class="input-wrapper">
+                <p class="input-title">Base B</p>
+                <input type="number" min="0" step="1" id="base"/>
+            </div>
+            <div class="input-wrapper">
+                <p class="input-title">Height H</p>
+                <input type="number" min="0" step="1" id="height"/>
+            </div>
+            <div class="calc-result">
+                    <p class='result-title'>Result:</p>
+                    <p id="result-field"> </p>
+            </div>
+            <button class="calc-button" id='calc-button' onclick="calculate()">Calculate</button>
         </div>
         <div class="calc-menu">
-            <button id="task1-button">Heron's formula</button>
-            <button id="task2-button">2 sides 1 angle area</button>
+            <input type="radio" id='task1-button' name="menu-button" >
+            <label for="task1-button" class="menu-label">Heron's formula</label>
+
+            <input type="radio" id="task2-button" name="menu-button">
+            <label for="task2-button" class="menu-label">area from 2 sides 1 angle</label>
+
+            <input type="radio" id="task3-button" name="menu-button">
+            <label for="task3-button" class="menu-label">area from Base and height</label>
         </div>
         <script src="calculatoins_script.js"></script>
     </body>

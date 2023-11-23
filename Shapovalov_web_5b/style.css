@@ -45,15 +45,19 @@ body {
 
 }
 
-
-.calc-button {
+.menu-label {
     border: none;    
     border-radius: 10px;
-    height: 30px;   
+    height: 40px;   
     font-weight: bold;
     color: rgb(57, 57, 57);
+    background-color: white;
 }
 
+input[name='menu-button'] {
+    visibility: hidden;
+}
+ 
 #result-field {
     margin: 0 0 0 5px;
 }
