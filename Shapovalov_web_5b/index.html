@@ -4,30 +4,57 @@
     </head>
     <body>
         <div class="calc-container" id="calc-cont">
-            <!--<div style="color: red; font-weight: bold; font-size: 40px;">Choose calculation method!</div>-->
-            <div class="input-wrapper">
-                <p class="input-title">Base B</p>
-                <input type="number" min="0" step="1" id="base"/>
-            </div>
-            <div class="input-wrapper">
-                <p class="input-title">Height H</p>
-                <input type="number" min="0" step="1" id="height"/>
-            </div>
-            <div class="calc-result">
-                    <p class='result-title'>Result:</p>
-                    <p id="result-field"> </p>
-            </div>
-            <button class="calc-button" id='calc-button' onclick="calculate()">Calculate</button>
+            <div style="color: red; font-weight: bold; font-size: 40px;">Choose calculation method!</div>
+            <div style="color: red; font-weight: bold; font-size: 18px;">Hover on buttons to read description</div>
         </div>
         <div class="calc-menu">
-            <input type="radio" id='task1-button' name="menu-button" >
-            <label for="task1-button" class="menu-label">Heron's formula</label>
+            <div>
+                <input type="radio" id='task1-button' name="menu-button" >
+                <label for="task1-button" class="menu-label" title="Calulates the area of a triangle from 3 sides via Heron's formula">Heron's formula</label>
+            </div>
+            <div>
+                <input type="radio" id="task2-button" name="menu-button">
+                <label for="task2-button" class="menu-label" title="Calculates the area of a triangle from 2 sides and 1 angle">Triangle 1</label>
+            </div>
+            <div>
+                <input type="radio" id="task3-button" name="menu-button">
+                <label for="task3-button" class="menu-label" title="Calculates the area of a triangle from it's base and height">Triangle 2</label>
+            </div>
+            <div>
+                <input type="radio" id="task4-button" name="menu-button">
+                <label for="task4-button" class="menu-label" title="Calculates the area of a triangle from 3 sides and exradius">Triangle 3</label>
+            </div>
+            <div>
+                <input type="radio" id="task5-button" name="menu-button">
+                <label for="task5-button" class="menu-label" title="Checks if the number is a palindrome">Palindrome</label>
+            </div>
+            <div>
+                <input type="radio" id="task6-button" name="menu-button">
+                <label for="task6-button" class="menu-label" title="Checks if the second word is an anagram">anagram</label>
+            </div>
+            <div>
+                <input type="radio" id="task7-button" name="menu-button">
+                <label for="task7-button" class="menu-label" title="Outputs fibonacci number at index (starting from 0)">fibonacci number</label>
+            </div>
+            <div>
+                <input type="radio" id="task8-button" name="menu-button">
+                <label for="task8-button" class="menu-label" title="Checks if the inputted number exists in fibonacci sequence">fibonacci check</label>
+            </div>
+            
 
-            <input type="radio" id="task2-button" name="menu-button">
-            <label for="task2-button" class="menu-label">area from 2 sides 1 angle</label>
+            
 
-            <input type="radio" id="task3-button" name="menu-button">
-            <label for="task3-button" class="menu-label">area from Base and height</label>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
         </div>
         <script src="calculatoins_script.js"></script>
     </body>
