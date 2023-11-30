@@ -12,6 +12,8 @@ import * as uuid from 'uuid';
  */
 const SingleAnswerComponent = (props) => {
 
+    let i = 0; //add this as useState
+
  let selectedAnswerIndex = null;
  const radioClick = (index) => {
   selectedAnswerIndex = index;
@@ -29,6 +31,7 @@ const SingleAnswerComponent = (props) => {
   } else {
    wrongRef.current.classList.add('selected');
    correctRef.current.classList.remove('selected');
+   i+1;
   }
  };
 
@@ -52,6 +55,7 @@ const SingleAnswerComponent = (props) => {
     })}
    </div>
    <div className='check'>
+   <button counter={i}/>  //This here is just a component with an argument
     <div className='button' onClick={checkOnClick}>
      check my answer
      <div ref={correctRef} className='correct'>correct</div>
