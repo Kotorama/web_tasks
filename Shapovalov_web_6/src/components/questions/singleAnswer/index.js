@@ -15,6 +15,12 @@ const SingleAnswerComponent = (props) => {
 
   const [count, setCount] = useState(0);
 
+  const [selectCorrectAnswer, _setSelectCorrectAnswer] = useState(false)
+
+  const setSelectCorrectAnswer = () => {
+    _setSelectCorrectAnswer(true)
+  }
+
   let selectedAnswerIndex = null;
   const radioClick = (index) => {
     selectedAnswerIndex = index;
@@ -50,13 +56,14 @@ const SingleAnswerComponent = (props) => {
               type='radio'
               name={`group-${qId}`}
               onClick={() => radioClick(i)}
+              checked={selectCorrectAnswer ? (i === props.correctAnswer) : undefined}
             />
             <label for={id}>{answer}</label>
           </div>);
         })}
       </div>
       <div className='check'>
-        <button counter={count} />  //This here is just a component with an argument
+        <button counter={count} set={setSelectCorrectAnswer} />  //This here is just a component with an argument
         <div className='button' onClick={checkOnClick}>
           check my answer
           <div ref={correctRef} className='correct'>correct</div>
