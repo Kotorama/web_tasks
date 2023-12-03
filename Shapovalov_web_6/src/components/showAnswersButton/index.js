@@ -1,29 +1,34 @@
+import { useRef } from "react";
+import './style.css';
+
 
 const ShowAnswersButton = (props) => {
 
   /***
    * @type {{
-  *   wrongAnswerCount: any,
-  *   correctAnswer: any,
+  *   wrongAnswerCount: number,
   * set: () => void
    * }}
    */
-  const { wrongAnswerCount, correctAnswer, set } = props
+  const { wrongAnswerCount, set } = props
+
+  const buttonRef = useRef();
 
   const chooseCorrect = () => {
     set()
   }
 
   if (wrongAnswerCount > 2) {
-
+    buttonRef.current.classList.add('visible')
   }
 
   return (
     <div className='give-answer'>
-      <div className='button' onClick={chooseCorrect()}>
-
+      <div ref={buttonRef} className='check-button' onClick={() => chooseCorrect()}>
+        reveal the answer
       </div>
     </div>
   );
 };
 
+export default ShowAnswersButton;

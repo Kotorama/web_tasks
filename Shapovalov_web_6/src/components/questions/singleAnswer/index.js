@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { useState } from 'react';
 import './style.css';
 import * as uuid from 'uuid';
+import ShowAnswersButton from '../../showAnswersButton';
 
 /**
  * 
@@ -58,16 +59,24 @@ const SingleAnswerComponent = (props) => {
               onClick={() => radioClick(i)}
               checked={selectCorrectAnswer ? (i === props.correctAnswer) : undefined}
             />
-            <label for={id}>{answer}</label>
+            <label
+              for={id}
+              className={selectCorrectAnswer && (i === props.correctAnswer) ? 'checked-label' : undefined}
+            >{answer}</label>
           </div>);
         })}
       </div>
       <div className='check'>
-        <button counter={count} set={setSelectCorrectAnswer} />  //This here is just a component with an argument
-        <div className='button' onClick={checkOnClick}>
-          check my answer
-          <div ref={correctRef} className='correct'>correct</div>
-          <div ref={wrongRef} className='wrong'>wrong {count}</div>
+        <div className='buttons-wrapper'>
+          <div className='button' onClick={checkOnClick}>
+            check my answer
+            <div ref={correctRef} className='correct'>correct</div>
+            <div ref={wrongRef} className='wrong'>wrong {count}</div>
+          </div>
+          <ShowAnswersButton
+            wrongAnswerCount={count}
+            set={setSelectCorrectAnswer}
+          />
         </div>
 
       </div>
