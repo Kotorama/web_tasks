@@ -53,3 +53,8 @@
 .question.single-answer .check .button .wrong.selected {
   top: 0;
 }
+
+.questions .checked-label {
+  color: green;
+  transition: 0.25s;
+}

@@ -20,6 +20,8 @@ const SingleAnswerComponent = (props) => {
 
   const setSelectCorrectAnswer = () => {
     _setSelectCorrectAnswer(true)
+    correctRef.current.classList.add('selected');
+    wrongRef.current.classList.remove('selected');
   }
 
   let selectedAnswerIndex = null;
@@ -33,7 +35,7 @@ const SingleAnswerComponent = (props) => {
   const wrongRef = useRef();
 
   const checkOnClick = () => {
-    if (selectedAnswerIndex === props.correctAnswer) {
+    if (selectedAnswerIndex === props.correctAnswer || selectCorrectAnswer) {
       correctRef.current.classList.add('selected');
       wrongRef.current.classList.remove('selected');
     } else {
