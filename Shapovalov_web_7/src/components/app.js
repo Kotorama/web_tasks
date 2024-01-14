@@ -46,23 +46,17 @@ const AppComponent = () => {
     setSelectedGoods([]);
   };
 
-  const unselectAllGoods = () => {
-    setSelectedGoods(() => {
-      return []
-    });
-  };
-
   return (
     <div className='app'>
       <div className='wrapper'>
         <GoodsContext.Provider value={{
+          currentTableGoods: data,
           selectedGoods: selectedGoods,
           addGoods,
           removeGoods,
           removeAllGoods,
-          unselectAllGoods,
         }}>
-          <CounterComp goods={data} addGoods={addGoods} />
+          <CounterComp />
           <div className='goods-wrapper'>
             {
               data.map(el => {
