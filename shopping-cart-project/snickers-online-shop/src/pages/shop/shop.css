@@ -79,6 +79,7 @@ button:hover {
   text-overflow: ellipsis;
   max-width: 200px;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .item-title:hover {

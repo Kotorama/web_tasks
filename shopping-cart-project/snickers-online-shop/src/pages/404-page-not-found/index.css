@@ -1,0 +1,17 @@
+.ErrorMessage {
+  font-size: 50px;
+  color: red;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.error-image {
+  aspect-ratio: 1/1;
+
+  height: 100px;
+}
