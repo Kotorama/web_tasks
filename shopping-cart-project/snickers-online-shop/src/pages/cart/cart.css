@@ -1,0 +1,5 @@
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+}

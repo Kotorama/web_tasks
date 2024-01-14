@@ -1,0 +1,7 @@
+page for each of the products
+  image gallery
+  cart
+animations
+load screen
+404 page not found
+complete css

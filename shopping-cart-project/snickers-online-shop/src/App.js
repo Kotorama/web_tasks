@@ -14,6 +14,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Shop />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='*' element={<PageNotFound />} />
           </Routes>
         </Router>
       </CartContextProvider>
