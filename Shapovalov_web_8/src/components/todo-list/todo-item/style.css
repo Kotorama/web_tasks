@@ -1,0 +1,39 @@
+.todo-item {
+ display: grid;
+ grid-template-columns: 5fr 1.5fr 0.5fr 0.5fr ;
+ align-items: center;
+ padding: 7px 30px;
+ background-color: rgb(38 37 37);
+ border-radius: 80px;
+ margin-bottom: 10px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo-item span {
+ margin-left: 10px;
+ color: #fff;
+}
+
+
+.todo-item .todo-text {
+ color: #fff !important;
+ margin-right: auto;
+ font-size: 16px !important;
+}
+
+.todo-item .span-button {
+ margin-left: auto;
+ display: block;
+ padding: 5px;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ font-size: 18px !important;
+
+}
+.todo-item .span-button:hover {
+ background-color: rgb(52, 53, 53);
+ border-radius: 80px;
+ /* padding: 4px 6px; */
+ color: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
