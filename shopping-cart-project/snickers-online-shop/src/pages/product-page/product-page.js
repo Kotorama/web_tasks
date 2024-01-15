@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom';
 import productsData from '../../products.json'
 import MissingPage from '../404-page-not-found/404-page-not-found';
-import ProductElement from '../../components/product-element/product-element';
+import ProductElement from './product-element';
 
 const ProductPage = () => {
 

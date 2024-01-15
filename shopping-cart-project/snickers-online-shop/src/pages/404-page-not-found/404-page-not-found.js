@@ -1,6 +1,5 @@
-import React from 'react'
-import './index.css'
-import image from './images/ant-meme.png'
+import React from 'react';
+import './index.css';
 
 const MissingPage = () => {
   return (
@@ -8,7 +7,9 @@ const MissingPage = () => {
       <div>
         Error 404: Page was found
       </div>
-      <image className='error-image' src={image} />
+      <div>
+        <img className='error-image' src='./images/ant.jpg' />
+      </div>
     </div>
   )
 }

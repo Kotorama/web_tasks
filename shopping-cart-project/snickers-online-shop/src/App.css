@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  height: 100vh;
 }
 
 .App {
@@ -41,3 +42,5 @@ body {
     transform: rotate(360deg);
   }
 }
+
+@import "~react-image-gallery/styles/css/image-gallery.css";

@@ -41,9 +41,10 @@
   justify-content: center;
 }
 
-img {
+.preview-image {
   max-width: 200px;
   max-height: 200px;
+  object-fit: cover;
 }
 
 .img-container {
@@ -54,7 +55,7 @@ img {
   justify-content: center;
 }
 
-button {
+.shop-button {
   border: none;
   background-color: rgb(140, 192, 63);
   border-radius: 10px;
@@ -63,7 +64,7 @@ button {
   color: whitesmoke;
 }
 
-button:hover {
+.shop-button:hover {
   cursor: pointer;
   background-color: rgb(124, 169, 57);
 }
@@ -72,12 +73,17 @@ button:hover {
   margin: 5px 0;
 }
 
-.item-title {
+.info-box {
+  width: 200px;
+}
+
+a.item-title {
+  display: block;
   height: 16px;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px;
+  width: 200px;
   white-space: nowrap;
   text-decoration: none;
 }

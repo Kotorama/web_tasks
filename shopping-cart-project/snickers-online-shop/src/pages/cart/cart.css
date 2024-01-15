@@ -1,5 +1,60 @@
 .cart-item {
   display: flex;
   flex-direction: column;
-  width: 140px;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-button,
+.remove-button {
+  width: 60px;
+  height: 30px;
+  margin: 2px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.add-button {
+  background-color: green;
+}
+
+.remove-button {
+  background-color: rgb(158, 11, 11);
+}
+
+.cart-image {
+  max-width: 180px;
+  max-height: 180px;
+  object-fit: cover;
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 15px;
+  row-gap: 50px;
+  margin: 20px;
+
+}
+
+.cart-grid>* {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-title {
+  display: block;
+  height: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+  white-space: nowrap;
+  text-decoration: none;
 }

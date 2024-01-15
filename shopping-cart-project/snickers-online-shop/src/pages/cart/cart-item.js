@@ -1,8 +1,7 @@
 import React from 'react'
 import { useContext } from 'react';
 import { CartContext } from '../../context/cart-context';
-import { backspace } from 'phosphor-react'
-import './cart.css'
+import './cart.css';
 
 export const CartItem = (props) => {
   const { id, title, price, imageSrc, brand } = props.data;
@@ -10,15 +9,15 @@ export const CartItem = (props) => {
   return (
     <div className='cart-item'>
       <div>
-        <img src={imageSrc}></img>
+        <img className='cart-image' src={imageSrc} />
       </div>
       <div className='info'>
         <div className='item-title'>{title}</div>
         <div className='price'>{cartItems[id] > 1 && <>({cartItems[id]})</>}{price * cartItems[id]} UAH</div>
       </div>
       <div className='buttons'>
-        <button className='add-button'></button>
-        <button className='remove-button'></button>
+        <button className='add-button' onClick={() => addToCart(id)}>Add</button>
+        <button className='remove-button' onClick={() => removeFromCart(id)}>Remove</button>
       </div>
     </div>
   )

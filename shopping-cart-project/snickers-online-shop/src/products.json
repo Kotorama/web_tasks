@@ -4,34 +4,124 @@
     "title": "Adidas X_Plrboost",
     "price": 7499,
     "imageSrc": "assets/1.jpg",
-    "brand": "Adidas"
+    "brand": "Adidas",
+    "gallery": [
+      {
+        "original": "/assets/1.jpg",
+        "thumbnail": "/assets/1.jpg"
+      },
+      {
+        "original": "https://picsum.photos/id/1018/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1018/250/150/"
+      },
+      {
+        "original": "https://picsum.photos/id/1015/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1015/250/150/"
+      },
+      {
+        "original": "https://picsum.photos/id/1019/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1019/250/150/"
+      }
+    ]
   },
   {
     "id": 2,
     "title": "Reebok Question Mid 'The Question' GX0230",
     "price": 3199,
     "imageSrc": "assets/2.jpg",
-    "brand": "Reebok"
+    "brand": "Reebok",
+    "gallery": [
+      {
+        "original": "/assets/2.jpg",
+        "thumbnail": "/assets/2.jpg"
+      },
+      {
+        "original": "https://picsum.photos/id/1018/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1018/250/150/"
+      },
+      {
+        "original": "https://picsum.photos/id/1015/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1015/250/150/"
+      },
+      {
+        "original": "https://picsum.photos/id/1019/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1019/250/150/"
+      }
+    ]
   },
   {
     "id": 3,
     "title": "AIR JORDAN 1 MID SE",
     "price": 4899,
     "imageSrc": "assets/3.jpg",
-    "brand": "Nike"
+    "brand": "Nike",
+    "gallery": [
+      {
+        "original": "/assets/3.jpg",
+        "thumbnail": "/assets/3.jpg"
+      },
+      {
+        "original": "https://picsum.photos/id/1018/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1018/250/150/"
+      },
+      {
+        "original": "https://picsum.photos/id/1015/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1015/250/150/"
+      },
+      {
+        "original": "https://picsum.photos/id/1019/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1019/250/150/"
+      }
+    ]
   },
   {
     "id": 4,
     "title": "ADIDAS OZWEEGO",
     "price": 3849,
     "imageSrc": "assets/4.jpg",
-    "brand": "Adidas"
+    "brand": "Adidas",
+    "gallery": [
+      {
+        "original": "/assets/4.jpg",
+        "thumbnail": "/assets/4.jpg"
+      },
+      {
+        "original": "https://picsum.photos/id/1018/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1018/250/150/"
+      },
+      {
+        "original": "https://picsum.photos/id/1015/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1015/250/150/"
+      },
+      {
+        "original": "https://picsum.photos/id/1019/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1019/250/150/"
+      }
+    ]
   },
   {
     "id": 5,
     "title": "ADIDAS STREETBALL II",
     "price": 3789,
     "imageSrc": "assets/5.jpg",
-    "brand": "Adidas"
+    "brand": "Adidas",
+    "gallery": [
+      {
+        "original": "/assets/5.jpg",
+        "thumbnail": "/assets/5.jpg"
+      },
+      {
+        "original": "https://picsum.photos/id/1018/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1018/250/150/"
+      },
+      {
+        "original": "https://picsum.photos/id/1015/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1015/250/150/"
+      },
+      {
+        "original": "https://picsum.photos/id/1019/1000/600/",
+        "thumbnail": "https://picsum.photos/id/1019/250/150/"
+      }
+    ]
   }
 ]
