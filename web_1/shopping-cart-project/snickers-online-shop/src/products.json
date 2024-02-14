@@ -3,12 +3,12 @@
     "id": 1,
     "title": "Adidas X_Plrboost",
     "price": 7499,
-    "imageSrc": "assets/1.jpg",
+    "imageSrc": "assets/1.webp",
     "brand": "Adidas",
     "gallery": [
       {
-        "original": "/assets/1.jpg",
-        "thumbnail": "/assets/1.jpg"
+        "original": "/assets/1.webp",
+        "thumbnail": "/assets/1.webp"
       },
       {
         "original": "https://picsum.photos/id/1018/1000/600/",
@@ -28,12 +28,12 @@
     "id": 2,
     "title": "Reebok Question Mid 'The Question' GX0230",
     "price": 3199,
-    "imageSrc": "assets/2.jpg",
+    "imageSrc": "assets/2.webp",
     "brand": "Reebok",
     "gallery": [
       {
-        "original": "/assets/2.jpg",
-        "thumbnail": "/assets/2.jpg"
+        "original": "/assets/2.webp",
+        "thumbnail": "/assets/2.webp"
       },
       {
         "original": "https://picsum.photos/id/1018/1000/600/",
@@ -53,12 +53,12 @@
     "id": 3,
     "title": "AIR JORDAN 1 MID SE",
     "price": 4899,
-    "imageSrc": "assets/3.jpg",
+    "imageSrc": "assets/3.webp",
     "brand": "Nike",
     "gallery": [
       {
-        "original": "/assets/3.jpg",
-        "thumbnail": "/assets/3.jpg"
+        "original": "/assets/3.webp",
+        "thumbnail": "/assets/3.webp"
       },
       {
         "original": "https://picsum.photos/id/1018/1000/600/",
@@ -78,12 +78,12 @@
     "id": 4,
     "title": "ADIDAS OZWEEGO",
     "price": 3849,
-    "imageSrc": "assets/4.jpg",
+    "imageSrc": "assets/4.webp",
     "brand": "Adidas",
     "gallery": [
       {
-        "original": "/assets/4.jpg",
-        "thumbnail": "/assets/4.jpg"
+        "original": "/assets/4.webp",
+        "thumbnail": "/assets/4.webp"
       },
       {
         "original": "https://picsum.photos/id/1018/1000/600/",
@@ -103,12 +103,12 @@
     "id": 5,
     "title": "ADIDAS STREETBALL II",
     "price": 3789,
-    "imageSrc": "assets/5.jpg",
+    "imageSrc": "assets/5.webp",
     "brand": "Adidas",
     "gallery": [
       {
-        "original": "/assets/5.jpg",
-        "thumbnail": "/assets/5.jpg"
+        "original": "/assets/5.webp",
+        "thumbnail": "/assets/5.webp"
       },
       {
         "original": "https://picsum.photos/id/1018/1000/600/",

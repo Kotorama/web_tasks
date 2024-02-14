@@ -1,6 +1,5 @@
 .cart-item {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -21,8 +20,16 @@
   background-color: green;
 }
 
-.remove-button {
+.remove-button,
+.remove-button-all {
   background-color: rgb(158, 11, 11);
+}
+
+.remove-button-all {
+  width: 5px;
+  font-size: 10px;
+  text-align: center;
+  aspect-ratio: 1/1;
 }
 
 .cart-image {
@@ -43,7 +50,6 @@
 
 .cart-grid>* {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }

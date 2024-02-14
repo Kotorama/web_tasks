@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <CartContextProvider>
-        <Router>
+        <    >
           <Navbar />
           <Routes>
             <Route path='/' element={<Shop />} />
