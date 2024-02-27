@@ -10,6 +10,7 @@
     "firstName": "firstName-1",
     "lastName": "lastName-1",
     "login": "login-1",
-    "password": "password-1"
+    "password": "password-1",
+    "token": "c82cebdd-0399-4593-a21b-21921220443e"
   }
 ]
