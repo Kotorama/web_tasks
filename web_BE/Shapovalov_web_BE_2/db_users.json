@@ -4,6 +4,25 @@
     "lastName": "lastName-1",
     "login": "l1",
     "password": "p1",
-    "token": "d71ca616-13b3-4bc1-8323-980fcea6b59a"
+    "token": "738cf68c-a3e7-46ea-bff2-1a68c1b6ac56"
+  },
+  {
+    "firstName": "firstName-1",
+    "lastName": "lastName-1",
+    "login": "lTest",
+    "password": "p1",
+    "role": "Customer"
+  },
+  {
+    "login": "admin1",
+    "password": "p1",
+    "role": "Admin",
+    "token": "6b555afe-1eb0-4f98-bed6-16b684abe2c5"
+  },
+  {
+    "login": "d1",
+    "password": "p1",
+    "role": "Driver",
+    "token": "b0696675-0017-46b0-8f88-7349334473e2"
   }
 ]
