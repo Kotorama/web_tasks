@@ -11,7 +11,8 @@
     "lastName": "lastName-1",
     "login": "lTest",
     "password": "p1",
-    "role": "Customer"
+    "role": "Customer",
+    "token": "3b49d360-c228-4a82-85bc-a7703b2b72fe"
   },
   {
     "login": "admin1",
@@ -23,6 +24,6 @@
     "login": "d1",
     "password": "p1",
     "role": "Driver",
-    "token": "b0696675-0017-46b0-8f88-7349334473e2"
+    "token": "c0a5ba4e-411d-4552-9348-371971334c90"
   }
 ]

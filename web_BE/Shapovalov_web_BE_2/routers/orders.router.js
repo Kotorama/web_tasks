@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { authorizationMiddleware } from '../middlewares.js';
-import { ORDERS, ADDRESSES } from '../db.js';
+import { USERS, ORDERS, ADDRESSES } from '../db.js';
 
 export const OrdersRouter = Router();
 
@@ -141,7 +141,7 @@ OrdersRouter.post('/orders', authorizationMiddleware, (req, res) => {
 
   ORDERS.push(order);
 
-  return res.status(200).send({ message: 'Order was created', order, distance, setAddresses });
+  return res.status(200).send({ message: 'Order was created', order, distance });
 });
 
 /**
@@ -222,9 +222,11 @@ OrdersRouter.get('/orders', authorizationMiddleware,
  * PATCH /orders/fhsdjkhfkd123sj
  */
 
-OrdersRouter.patch('/orders/:orderId', (req, res) => {
+OrdersRouter.patch('/orders/:orderId', authorizationMiddleware, (req, res) => {
 
-  const { params } = req;
+  const { body, headers, params } = req;
+
+  const token = headers.authorization;
 
   let order = ORDERS.find(el => el.id === params.orderId);
 
@@ -232,7 +234,50 @@ OrdersRouter.patch('/orders/:orderId', (req, res) => {
     return res.status(400).send({ message: `Order with id ${params.orderId} was not found` });
   }
 
-  const { body } = req;
+  const user = USERS.find(el => el.token === token);
+
+  if (order.status == "Done") {
+    return res.status(400).send({ message: "Can not change order status from \"Done\"" })
+  }
+
+  switch (user.role) {
+    case "Customer":
+      if (order.status !== "Active") {
+        return res.status(400).send({ message: 'Order is not Active' })
+      }
+      if (body.status !== "Rejected") {
+        return res.status(400).send({ message: 'Invalid status value' })
+      }
+      break;
+    case "Driver":
+      if (order.status == "Active") {
+        if (body.status !== "In progress") {
+          return res.status(400).send({ message: 'Invalid status value' })
+        }
+      } else if (order.status == "In progress") {
+        if (body.status !== "Done") {
+          return res.status(400).send({ message: 'Invalid status value' })
+        }
+      } else {
+        return res.status(400).send({ message: "Order is not \"Active\" or \"In progress\"" })
+      }
+      break;
+    case "Admin":
+      if (order.status == "Active") {
+        if (body.status !== "Rejected" || body.status !== "In progress") {
+          return res.status(400).send({ message: 'Invalid status value' })
+        }
+      } else if (order.status == "In progress") {
+        if (body.status !== "Done") {
+          return res.status(400).send({ message: 'Invalid status value' })
+        }
+      } else {
+        return res.status(400).send({ message: "Order is not \"Active\" or \"In progress\"" })
+      }
+      break;
+    default:
+      return res.status(400).send({ message: 'User role is not valid' })
+  };
 
   ORDERS.update((el) => el.id === params.orderId, { status: body.status });
 

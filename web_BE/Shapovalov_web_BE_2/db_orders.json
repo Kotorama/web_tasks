@@ -3,30 +3,6 @@
     "from": "address - 1",
     "to": "address - 2",
     "login": "l1",
-    "createdAt": "2024-02-11T22:00:00.158Z"
-  },
-  {
-    "from": "address - 1",
-    "to": "address - 2",
-    "login": "l1",
-    "createdAt": "2024-02-11T22:00:00.000Z"
-  },
-  {
-    "from": "address - 1",
-    "to": "address - 2",
-    "login": "l1",
-    "createdAt": "2024-02-12T00:00:00.000Z"
-  },
-  {
-    "from": "address - 1",
-    "to": "address - 2",
-    "login": "l1",
-    "createdAt": "2024-02-12T00:00:00.000Z"
-  },
-  {
-    "from": "address - 1",
-    "to": "address - 2",
-    "login": "l1",
     "createdAt": "2024-02-13T00:00:00.000Z",
     "status": "Done",
     "id": "e1b6dcb8-74ff-4db2-b73c-b84d8906a35d"
@@ -140,5 +116,15 @@
     "createdAt": "2024-03-27T00:00:00.000Z",
     "status": "Active",
     "id": "b3943bf3-ee80-4507-8aed-9a3ebc8cea79"
+  },
+  {
+    "from": "address - 7",
+    "to": "address - 4",
+    "type": "standard",
+    "price": 2577.5,
+    "login": "lTest",
+    "createdAt": "2024-04-19T23:00:00.000Z",
+    "status": "Done",
+    "id": "aa1436a2-d177-4502-8b25-e42b946567e1"
   }
 ]
