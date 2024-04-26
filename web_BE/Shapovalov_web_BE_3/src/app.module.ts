@@ -7,11 +7,13 @@ import { UserAuthorizationMiddleware } from './midellware/userAuthorization.midd
 import { OrdersController } from './controllers/orders.controller';
 import { OrderService } from './service';
 
+// mongodb + srv://michaelshapovalov3012:6RZT2f8UtBPbBE03@cluster0.jyshuak.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://mykola_2024:tfEsXsIfxkgNx6KG@cluster0.z33oori.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
-      { dbName: '4CS-11' },
+      'mongodb+srv://michaelshapovalov3012:6RZT2f8UtBPbBE03@cluster0.jyshuak.mongodb.net/',
+      { dbName: 'Cluster0' },
     ),
     MongooseModule.forFeature([
       {
