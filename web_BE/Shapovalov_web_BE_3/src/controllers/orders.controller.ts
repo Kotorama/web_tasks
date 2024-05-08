@@ -5,7 +5,7 @@ import { UserLeanDoc } from '../schema';
 
 @Controller({ path: '/orders' })
 export class OrdersController {
-  constructor(private readonly orderService: OrderService) {}
+  constructor(private readonly orderService: OrderService) { }
 
   @Post('/')
   async createOrder(
@@ -25,3 +25,4 @@ export class OrdersController {
     }
   }
 }
+

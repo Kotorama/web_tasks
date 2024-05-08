@@ -9,7 +9,7 @@ export class OrderService {
   constructor(
     @InjectModel(Orders.name)
     private readonly orderModel: Model<OrdersDoc>,
-  ) {}
+  ) { }
 
   async createOrder(body: OrderDto & { login: string }) {
     const price = 50;

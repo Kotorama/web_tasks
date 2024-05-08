@@ -1,5 +1,5 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
-import { UsersController } from './controllers/users.controller';
+import { AdminController, UsersController } from './controllers/users.controller';
 import { UserService } from './service/user.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Orders, OrdersSchema, UserSchema, Users } from './schema';
@@ -26,7 +26,7 @@ import { OrderService } from './service';
       },
     ]),
   ],
-  controllers: [UsersController, OrdersController],
+  controllers: [UsersController, OrdersController, AdminController],
   providers: [UserService, OrderService],
 })
 export class AppModule implements NestModule {
