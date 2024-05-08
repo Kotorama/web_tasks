@@ -4,17 +4,21 @@ import {
   Controller,
   Get,
   Post,
+  Req,
+  UnauthorizedException,
+  Headers
 } from '@nestjs/common';
 import { UserService } from '../service';
-import { LoginDto, UserDto } from '../models';
+import { InternalUserDto, LoginDto, UserDto } from '../models';
 import { UserAlreadyExists, UserNotFound } from '../shared';
 
 @Controller({ path: '/users' })
 export class UsersController {
-  constructor(private readonly userService: UserService) {}
+  constructor(private readonly userService: UserService) { }
 
   @Post('/')
-  async createUser(@Body() body: UserDto) {
+  async createCustomer(@Body() body: UserDto) {
+    body.role = 'Customer';
     try {
       const result = await this.userService.createUser(body);
       return result;
@@ -42,5 +46,52 @@ export class UsersController {
   @Get('/')
   async getAllUsers() {
     return this.userService.getAllUsers();
+  }
+}
+
+@Controller({ path: '/admin' })
+export class AdminController {
+  constructor(private readonly userService: UserService) { }
+
+  @Post('/')
+  async createAdmin(@Body() body: InternalUserDto, @Req() req: Request, @Headers('authorization') authorization?: string) {
+
+    body.role = 'Admin';
+
+    console.log(authorization)
+    if (authorization !== 'quake3arena') {
+      throw new UnauthorizedException('Authorization error')
+    }
+
+    try {
+      const result = await this.userService.createInternalUser(body);
+      return result;
+    } catch (err) {
+      if (err instanceof UserAlreadyExists) {
+        throw new BadRequestException(err.message);
+      }
+      throw err;
+    }
+  }
+}
+
+@Controller({ path: '/driver' })
+export class DriverController {
+  constructor(private readonly userService: UserService) { }
+
+  @Post('/')
+  async createDriver(@Body() body: InternalUserDto, @Req() req: Request) {
+
+    body.role = 'Driver';
+
+    try {
+      const result = await this.userService.createInternalUser(body);
+      return result;
+    } catch (err) {
+      if (err instanceof UserAlreadyExists) {
+        throw new BadRequestException(err.message);
+      }
+      throw err;
+    }
   }
 }

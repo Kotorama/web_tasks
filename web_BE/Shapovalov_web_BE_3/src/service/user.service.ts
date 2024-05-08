@@ -1,5 +1,5 @@
-import { Injectable } from '@nestjs/common';
-import { LoginDto, UserDto } from '../models';
+import { Injectable, BadRequestException } from '@nestjs/common';
+import { InternalUserDto, LoginDto, UserDto } from '../models';
 import { UserDoc, Users } from '../schema';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
@@ -11,9 +11,32 @@ export class UserService {
   constructor(
     @InjectModel(Users.name)
     private readonly userModel: Model<UserDoc>,
-  ) {}
+  ) { }
 
   async createUser(body: UserDto) {
+    const isExists = await this.userModel.findOne({
+      login: body.login,
+    });
+
+    if (isExists) {
+      throw new UserAlreadyExists(
+        `User with login ${body.login} already exists`,
+      );
+    }
+
+    /**
+     * Validation of data
+     */
+    const doc = new this.userModel(body);
+    /**
+     * Save to db
+     */
+    const user = await doc.save();
+
+    return user.toObject();
+  }
+
+  async createInternalUser(body: InternalUserDto) {
     const isExists = await this.userModel.findOne({
       login: body.login,
     });

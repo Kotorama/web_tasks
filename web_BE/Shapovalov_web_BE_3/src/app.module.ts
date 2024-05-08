@@ -1,11 +1,12 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
-import { UsersController } from './controllers/users.controller';
+import { AdminController, DriverController, UsersController } from './controllers/users.controller';
 import { UserService } from './service/user.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Orders, OrdersSchema, UserSchema, Users } from './schema';
 import { UserAuthorizationMiddleware } from './midellware/userAuthorization.middleware';
 import { OrdersController } from './controllers/orders.controller';
 import { OrderService } from './service';
+import { AppController } from './controllers/app.controller';
 
 // mongodb + srv://michaelshapovalov3012:6RZT2f8UtBPbBE03@cluster0.jyshuak.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
@@ -26,7 +27,7 @@ import { OrderService } from './service';
       },
     ]),
   ],
-  controllers: [UsersController, OrdersController],
+  controllers: [UsersController, OrdersController, AdminController, AppController, DriverController],
   providers: [UserService, OrderService],
 })
 export class AppModule implements NestModule {
