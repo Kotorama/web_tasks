@@ -12,8 +12,8 @@ export class AddressesService {
     private readonly addressModel: Model<AddressDoc>,
   ) { }
   async findAddresses(address: string): Promise<AddressDoc | null> {
-    const foundAddress = await this.addressModel.findOne({ name: address }).exec();
-    return foundAddress;
+    const resAddress = (await this.addressModel.findOne({ name: address }));
+    return resAddress;
   }
 
 
