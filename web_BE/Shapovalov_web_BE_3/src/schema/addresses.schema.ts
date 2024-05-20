@@ -12,10 +12,7 @@ export class Addresses {
   name: string;
 
   @Prop({ type: String, required: true })
-  longitude: string;
-
-  @Prop({ type: String, required: true })
-  latitude: Location;
+  location: Location;
 }
 
 export const AddressSchema = SchemaFactory.createForClass(Addresses);
