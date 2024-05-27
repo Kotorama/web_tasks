@@ -1,17 +1,28 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Types, Document } from 'mongoose';
 
-interface Location {
+// interface Location {
+//   longitude: number;
+//   latitude: number;
+// }
+
+@Schema({})
+export class Location {
+  @Prop({ type: Number, required: true })
   longitude: number;
+
+  @Prop({ type: Number, required: true })
   latitude: number;
 }
+
+export const LocationSchema = SchemaFactory.createForClass(Location);
 
 @Schema({ collection: 'addresses' })
 export class Addresses {
   @Prop({ type: String, required: true })
   name: string;
 
-  @Prop({ type: String, required: true })
+  @Prop({ type: Object, required: true })
   location: Location;
 }
 

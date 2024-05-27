@@ -14,6 +14,9 @@ export class Orders {
 
   @Prop({ type: String, required: true })
   login: string;
+
+  @Prop({ type: String, required: true })
+  status: string;
 }
 
 export const OrdersSchema = SchemaFactory.createForClass(Orders);

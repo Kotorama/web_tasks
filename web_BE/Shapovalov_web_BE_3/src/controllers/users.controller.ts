@@ -75,7 +75,7 @@ export class AdminController {
   }
 }
 
-@Controller({ path: '/driver' })
+@Controller({ path: '/drivers' })
 export class DriverController {
   constructor(private readonly userService: UserService) { }
 

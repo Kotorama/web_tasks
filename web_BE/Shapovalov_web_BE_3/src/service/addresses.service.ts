@@ -12,7 +12,7 @@ export class AddressesService {
     private readonly addressModel: Model<AddressDoc>,
   ) { }
   async findAddresses(address: string) {
-    const resAddress = await this.addressModel.findOne({ name: address }, { location: 1 });
+    const resAddress = await this.addressModel.findOne({ name: address });
     console.log(resAddress)
     const result = resAddress.toObject();
     console.log("result ", result)
