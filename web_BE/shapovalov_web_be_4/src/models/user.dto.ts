@@ -1,11 +1,13 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsString, IsNotEmpty, MinLength, IsOptional } from '@nestjs/class-validator';
+import { IsString, IsNotEmpty, MinLength, IsOptional, IsEmail } from 'class-validator';
+import { UUID } from 'mongodb';
 
-export class InternalUserDto {
+export class UserDto {
   @ApiProperty({ type: String })
   @IsString()
   @IsNotEmpty()
-  login: string;
+  @IsEmail()
+  email: string;
 
   @ApiProperty({ type: String })
   @IsString()

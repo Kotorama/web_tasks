@@ -54,7 +54,7 @@ export class AdminController {
   constructor(private readonly userService: UserService) { }
 
   @Post('/')
-  async createAdmin(@Body() body: InternalUserDto, @Req() req: Request, @Headers('authorization') authorization?: string) {
+  async createAdmin(@Body() body: InternalUserDto & { role: string }, @Req() req: Request, @Headers('authorization') authorization?: string) {
 
     body.role = 'Admin';
 
@@ -80,7 +80,7 @@ export class DriverController {
   constructor(private readonly userService: UserService) { }
 
   @Post('/')
-  async createDriver(@Body() body: InternalUserDto, @Req() req: Request) {
+  async createDriver(@Body() body: InternalUserDto & { role: string }, @Req() req: Request) {
 
     body.role = 'Driver';
 
