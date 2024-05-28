@@ -4,7 +4,7 @@ import { Types, Document } from 'mongoose';
 @Schema({ collection: 'Links' })
 export class Links {
   @Prop({ type: String, required: true })
-  user: string;
+  email: string;
 
   @Prop({ type: String, required: true })
   link: string;

@@ -3,6 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { UUID } from 'mongodb';
 import { Model } from 'mongoose';
 import { LinkDto } from 'src/models/link.dto';
+import { LinkFilterDto } from 'src/models/linkFilter.dto';
 import { UserDto } from 'src/models/user.dto';
 import { Links, LinksDoc } from 'src/schema/links.schema';
 import { Users, UsersDoc } from 'src/schema/users.schema';
@@ -16,7 +17,7 @@ export class LinksService {
     private readonly linksModel: Model<LinksDoc>,
   ) { }
 
-  async shortenLink(body: LinkDto & { user: string }) {
+  async shortenLink(body: LinkDto & { email: string }) {
     if (await this.linksModel.findOne({ link: body.originalLink })) {
       throw new LinkAlreadyExists();
     }
@@ -33,11 +34,17 @@ export class LinksService {
 
     console.log(shortLink);
 
-    const doc = new this.linksModel({ link: body.originalLink, shortLink: shortLink, expireAt: expDate, user: body.user });
+    const doc = new this.linksModel({ link: body.originalLink, shortLink: shortLink, expireAt: expDate, email: body.email });
 
     const link = await doc.save();
 
     return link;
+  }
+
+  async findLinks(body: LinkFilterDto & { email: string }) {
+    console.log(body.gt)
+    console.log(body.lt)
+    return;
   }
 }
 
